@@ -1,0 +1,37 @@
+/***** Start: Styleswitcher (design) **************************************************/
+ul#designwechsler 
+ {
+  position: absolute;
+  top: 25px;
+  right: 340px;
+  width: 80px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  z-index: 2;  
+  text-align: right;
+ }
+ 
+ul#designwechsler li { display: inline; }
+ul#designwechsler li a { padding: 0px 0px 0px 5px; } 
+
+
+
+/***** Start: Styleswitcher (font-size) *****************************************/
+ul#schriftwechsler 
+ {
+  position: absolute;
+  top: 25px;
+  right: 430px;
+  width: 100px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  z-index: 2;  
+  text-align: right;
+ }
+ 
+ul#schriftwechsler li { display: inline; }
+ul#schriftwechsler li a { padding: 0px 0px 0px 5px; } 

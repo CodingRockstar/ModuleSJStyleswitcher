@@ -1,0 +1,77 @@
+/***** Start: definitions for black / white design *****************/  
+body.blackwhite { color: #dddddd; background: #000000; } 
+
+body.blackwhite .error { color: #ffffff; }
+
+body.blackwhite div#header { background: #111111; } 
+body.blackwhite div#container { background: #111111; }
+body.blackwhite div#right div.inside { background: #222222; }  
+body.blackwhite div#right { background: #222222; }
+body.blackwhite div#right div.inside { background: #222222; }
+body.blackwhite div#footer { background: #111111; } 
+
+body.blackwhite h1 {  } 
+body.blackwhite h2 { color: #111111; background: #bbbbbb; }   
+body.blackwhite h3 { color: #cccccc; }
+body.blackwhite h4 { color: #cccccc; }
+body.blackwhite h5 { color: #cccccc; }
+body.blackwhite h6 { color: #cccccc; }   
+   
+body.blackwhite a         { color: #ffff99; text-decoration: none; } 
+body.blackwhite a:link    { color: #ffff99; text-decoration: none; }
+body.blackwhite a:visited { color: #cccc66; text-decoration: none; }
+body.blackwhite a:focus   { color: #ffff33; text-decoration: underline; } 
+body.blackwhite a:hover   { color: #ffff33; text-decoration: underline; }
+body.blackwhite a:active  { color: #ffff33; text-decoration: underline; } 
+
+body.blackwhite div#hauptmenue ul li a { color: #000000; background: #cccccc; margin: 0px 0px 5px 0px; border: 1px solid #dddddd; padding: 5px; } 
+body.blackwhite div#hauptmenue ul li.last a { background: #cccccc; padding-bottom: 5px; }
+body.blackwhite div#hauptmenue ul li ul li.last a {  } 
+
+body.blackwhite div#hauptmenue ul li a:focus   { color: #ffff33; background: #000033; border: 1px solid #ffff33; } 
+body.blackwhite div#hauptmenue ul li a:hover   { color: #ffff33; background: #000033; border: 1px solid #ffff33; }
+body.blackwhite div#hauptmenue ul li a:active  { color: #ffff33; background: #000033; border: 1px solid #ffff33; }
+
+body.blackwhite div#hauptmenue ul li.active a { color: #ffff33; background: #000033; border: 1px solid #ffff33; } 
+body.blackwhite div#hauptmenue ul li.trail  a { color: #ffff33; background: #000033; border: 1px solid #ffff33; }
+
+body.blackwhite div#hauptmenue ul li.submenu ul li a { color: #000000; background: #eeeeee; border: 1px solid #dddddd; }
+body.blackwhite div#hauptmenue ul li.submenu ul li.active a { color: #ffff33; background: #000033; border: 1px solid #ffff33; } 
+
+body.blackwhite div#hauptmenue ul li.submenu ul li a:focus   { color: #ffff33; background: #000033; border: 1px solid #ffff33; } 
+body.blackwhite div#hauptmenue ul li.submenu ul li a:hover   { color: #ffff33; background: #000033; border: 1px solid #ffff33; }
+body.blackwhite div#hauptmenue ul li.submenu ul li a:active  { color: #ffff33; background: #000033; border: 1px solid #ffff33; }
+
+body.blackwhite div#schnellmenue a         { color: #ffff99; text-decoration: none; } 
+body.blackwhite div#schnellmenue a:link    { color: #ffff99; text-decoration: none; }
+body.blackwhite div#schnellmenue a:visited { color: #cccc66; text-decoration: none; }
+
+body.blackwhite form input.text       { border: 1px solid #000000; background: #dddddd; }
+body.blackwhite form input.text:focus { border: 1px solid #ffff99; }
+body.blackwhite form input.quantity       { border: 1px solid #000000; background: #dddddd;  }
+body.blackwhite form input.quantity:focus { border: 1px solid #ffff99; }
+body.blackwhite form input.captcha       { font-size: 1em; border: 1px solid #00519c; background: #ffffff; padding: 2px; width: 35px; }
+body.blackwhite form input.captcha:focus { border: 1px solid #ffff99; }
+body.blackwhite form input.submit { border: 1px solid #000000; background: #dddddd; }
+body.blackwhite form input.submit:hover { background: #ffff99; }
+body.blackwhite form textarea.textarea       { border: 1px solid #000000; background: #dddddd; }
+body.blackwhite form textarea.textarea:focus { border: 1px solid #ffff99; }
+body.blackwhite form select.select       { border: 1px solid #000000; background: #dddddd; }
+body.blackwhite form select.select:focus { border: 1px solid #ffff99; }
+
+body.blackwhite div#header div.mod_search input.text       { border: 1px solid #ffffff; background: #dddddd; } 
+body.blackwhite div#header div.mod_search input.text:focus { border: 1px solid #ffff99; } 
+
+body.blackwhite div#right div.mod_article h2 { background: #222222; color: #dddddd; }
+
+body.blackwhite div#right div.mod_newslist div.layout_short h4 { background-image: url(../bilder/css/pfeile_weiss_auf_transparenz.png); border-color: #dddddd; }
+ 
+body.blackwhite div#right div.mod_article ul li a { background-image: url(../bilder/css/pfeile_weiss_auf_transparenz.png); border-color: #dddddd; } 
+ 
+body.blackwhite div#right div.mod_article { color: #eeeeee; } 
+body.blackwhite div#right div.mod_article a         { color: #ffff99; text-decoration: none; } 
+body.blackwhite div#right div.mod_article a:link    { color: #ffff99; text-decoration: none; }
+body.blackwhite div#right div.mod_article a:visited { color: #cccc66; text-decoration: none; }
+body.blackwhite div#right div.mod_article a:focus   { color: #ffff33; text-decoration: underline; } 
+body.blackwhite div#right div.mod_article a:hover   { color: #ffff33; text-decoration: underline; }
+body.blackwhite div#right div.mod_article a:active  { color: #ffff33; text-decoration: underline; } 

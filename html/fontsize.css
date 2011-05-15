@@ -1,0 +1,5 @@
+  
+/***** Start: definitions for font-sizes ****************/
+body.fontsmall div { font-size: 8pt; }
+body.fontmedium div { font-size: 10pt; }
+body.fontbig div { font-size: 12pt; }
