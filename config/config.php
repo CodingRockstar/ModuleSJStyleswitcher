@@ -43,7 +43,7 @@ $GLOBALS['TL_SJSTYLESWITCHER'] = array(
      
      'MEDIUM' => array(
         'label' => &$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_medium'],
-        'image' => '',
+        'image' => '/system/modules/ModuleSJStyleswitcher/html/schrift2.jpg',
         'css'   => '/system/modules/ModuleSJStyleswitcher/html/fontsize.css',
         'class' => 'fontmedium'
      ),
