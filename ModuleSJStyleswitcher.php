@@ -117,7 +117,6 @@ class ModuleSJStyleswitcher extends Module
 		if ($this->Input->get('changefont') != '' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('changefont')]))
 		{
 			// 3.1.1 set new style
-		    // $this->Input->setCookie('SJSTYLESWITCHER_FONTSIZE', $this->Input->get('changefont'));
 		    $this->setCookie('SJSTYLESWITCHER_FONTSIZE', $this->Input->get('changefont'), (($this->sjstyleswitcher_cookielifetime > 0) ? (time() + $this->sjstyleswitcher_cookielifetime*86400) : 0));
 		        
             // 3.1.2 redirect to page
@@ -128,7 +127,6 @@ class ModuleSJStyleswitcher extends Module
 		if ($this->Input->get('changestyle') != '' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('changestyle')]))
 		{
             // 3.2.1 set new style
-            // $this->Input->setCookie('SJSTYLESWITCHER_STYLE', $this->Input->get('changestyle'));
             $this->setCookie('SJSTYLESWITCHER_STYLE', $this->Input->get('changestyle'), (($this->sjstyleswitcher_cookielifetime > 0) ? (time() + $this->sjstyleswitcher_cookielifetime*86400) : 0));
                 
             // 3.2.2 redirect to page

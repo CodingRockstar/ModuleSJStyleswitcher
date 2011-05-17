@@ -30,13 +30,13 @@
 /**
  * Style names
  */
-$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_small']  = 'Kleine Schrift';
-$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_medium'] = 'Mittlere Schrift';
-$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_big']    = 'Große Schrift';
+$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_small']  = 'Kleine Schrift einstellen';
+$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_medium'] = 'Mittlere Schrift einstellen';
+$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['font_big']    = 'Große Schrift einstellen';
 
 
-$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['style_standard']    = 'Standard-Style';
-$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['style_blackwhite']  = 'Schwarz-Weiß-Kontrast';
+$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['style_standard']    = 'Standard-Design einstellen';
+$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['style_blackwhite']  = 'Schwarz-Weiß-Kontrast einstellen';
 
 
 ?>

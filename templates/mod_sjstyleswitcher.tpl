@@ -1,9 +1,11 @@
 <!-- indexer::stop -->
 <div class="<?php echo $this->class; ?><?php if (!$this->tableless): ?> tableform<?php endif; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
-<?php if ($this->headline): ?>
+ <a class="invisible" href="#skipNavigation1">Stilwechsel-Navigation überspringen</a>
 
-<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
-<?php endif; ?>
+ <?php if ($this->headline): ?>
+ <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+ <?php endif; ?>
+
 
 <?php /*******************************************************
        *       DO NOT REMOVE class="styleswitcher" !!!       *
@@ -32,6 +34,6 @@
 </ul>
 <?php endif; ?>
 
-
+ <a name="skipNavigation1" id="skipNavigation1" class="invisible">&nbsp;</a>
 </div>
 <!-- indexer::continue -->
