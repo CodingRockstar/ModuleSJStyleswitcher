@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Stephan Jahrling, 2011
+ * @copyright  Stephan Jahrling (Stephan Jahrling - Softwarelösungen), Oliver Richter (Grünfisch Webdesign) 2011
  * @author     Stephan Jahrling <info@jahrling-software.de>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
