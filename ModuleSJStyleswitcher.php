@@ -64,9 +64,9 @@ class ModuleSJStyleswitcher extends Module
 		}
 
 
-        $GLOBALS['TL_CSS'][] = '/system/modules/ModuleSJStyleswitcher/html/styleswitcher.css';
-        $GLOBALS['TL_JAVASCRIPT'][] = '/system/modules/ModuleSJStyleswitcher/html/styleswitcher.js';
-		
+		$GLOBALS['TL_CSS'][] = '/system/modules/ModuleSJStyleswitcher/html/styleswitcher.css';
+		$GLOBALS['TL_JAVASCRIPT'][] = '/system/modules/ModuleSJStyleswitcher/html/styleswitcher.js';
+
 
 		return parent::generate();
 	}
@@ -77,15 +77,16 @@ class ModuleSJStyleswitcher extends Module
 	 */
 	protected function compile()
 	{
-        global $objPage;
-        $this->import('Input');
-        $this->import('Session');
+	
+		global $objPage;
+		$this->import('Input');
+		$this->import('Session');
+
         
-        
-        // 1. font - sizes
+		// 1. font - sizes
 		$arrFonts = deserialize($this->sjstyleswitcher_fontsizes);
 		$arrTplFonts = array();
-		
+
 		if ( is_array($arrFonts) && count($arrFonts) )
 		   foreach ($arrFonts as $font)
 		   {
@@ -117,20 +118,20 @@ class ModuleSJStyleswitcher extends Module
 		if ($this->Input->get('changefont') != '' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('changefont')]))
 		{
 			// 3.1.1 set new style
-		    $this->setCookie('SJSTYLESWITCHER_FONTSIZE', $this->Input->get('changefont'), (($this->sjstyleswitcher_cookielifetime > 0) ? (time() + $this->sjstyleswitcher_cookielifetime*86400) : 0));
-		        
-            // 3.1.2 redirect to page
-            $this->redirect( $this->generateFrontendUrl($objPage->row()) );
+			$this->setCookie('SJSTYLESWITCHER_FONTSIZE', $this->Input->get('changefont'), (($this->sjstyleswitcher_cookielifetime > 0) ? (time() + $this->sjstyleswitcher_cookielifetime*86400) : 0));
+    
+			// 3.1.2 redirect to page
+			$this->redirect( $this->generateFrontendUrl($objPage->row()) );
 		}
 		
 		// 3.2 change style
 		if ($this->Input->get('changestyle') != '' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('changestyle')]))
 		{
-            // 3.2.1 set new style
-            $this->setCookie('SJSTYLESWITCHER_STYLE', $this->Input->get('changestyle'), (($this->sjstyleswitcher_cookielifetime > 0) ? (time() + $this->sjstyleswitcher_cookielifetime*86400) : 0));
-                
-            // 3.2.2 redirect to page
-            $this->redirect( $this->generateFrontendUrl($objPage->row()) );
+			// 3.2.1 set new style
+			$this->setCookie('SJSTYLESWITCHER_STYLE', $this->Input->get('changestyle'), (($this->sjstyleswitcher_cookielifetime > 0) ? (time() + $this->sjstyleswitcher_cookielifetime*86400) : 0));
+    
+			// 3.2.2 redirect to page
+			$this->redirect( $this->generateFrontendUrl($objPage->row()) );
 		}
 		
 		
@@ -138,20 +139,20 @@ class ModuleSJStyleswitcher extends Module
 		// 4. load saved styles
 		if ($this->Input->cookie('SJSTYLESWITCHER_FONTSIZE') != '')
 		{
-            $objPage->cssClass .= ' ' . $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['class'];
+			$objPage->cssClass .= ' ' . $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['class'];
 
-            if ( strlen($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css']) )
-                $GLOBALS['TL_CSS'][] = $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css'];
-        }
-   
-		   
+			if ( strlen($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css']) )
+				$GLOBALS['TL_CSS'][] = $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css'];
+		}
+
+  
 		if ($this->Input->cookie('SJSTYLESWITCHER_STYLE') != '')
 		{
-            $objPage->cssClass .= ' ' . $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['class'];
+			$objPage->cssClass .= ' ' . $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['class'];
 
-            if ( strlen($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css']) )
-                $GLOBALS['TL_CSS'][] = $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css'];
-        }	
+			if ( strlen($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css']) )
+				$GLOBALS['TL_CSS'][] = $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css'];
+		}	
         
         
         
