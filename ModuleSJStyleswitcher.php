@@ -155,16 +155,16 @@ class ModuleSJStyleswitcher extends Module
 		}	
         
         
-        
-        // 5. use styles as alternate stylesheets
-        if ($this->sjstyleswitcher_alternatestyles == '1')
-        	foreach ($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'] as $name => $style)
-        		if (strlen($style['css']))
-        			$GLOBALS['TL_HEAD'][] = '<link rel="alternate stylesheet" type="text/css" href="' . $style['css'] . '" title="' . $style['label'] . '" id="' . $name . '" />';
-        
-        
-        // 6. insert mootools
-        $GLOBALS['TL_MOOTOOLS'][] = "<script type='text/javascript'>
+       
+		// 5. use styles as alternate stylesheets
+		if ($this->sjstyleswitcher_alternatestyles == '1')
+			foreach ($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'] as $name => $style)
+				if (strlen($style['css']))
+					$GLOBALS['TL_HEAD'][] = '<link rel="alternate stylesheet" type="text/css" href="' . $style['css'] . '" title="' . $style['label'] . '" id="' . $name . '" />';
+
+
+		// 6. insert mootools
+		$GLOBALS['TL_MOOTOOLS'][] = "<script type='text/javascript'>
 <!--//--><![CDATA[//><!--
 window.addEvent('domready', function() {
    new SJStyleswitcher({id: " . $this->id . ", cookieLifetime: " . $this->sjstyleswitcher_cookielifetime . "});
@@ -181,24 +181,24 @@ window.addEvent('domready', function() {
 	 */
 	public function generateAjax()
 	{
-	    if (strlen($this->Input->get('type')) && strlen($this->Input->get('style')))
-	    {
-	    
-	       if ($this->Input->get('type') == 'changefont' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('style')]))
-	       {
-	          $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('style')]['deleteClass'] = $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['class'];
-	          return $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('style')];
-	       }
-	          
-	       if ($this->Input->get('type') == 'changestyle' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('style')]))
-	       {
-	          $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('style')]['deleteClass'] = $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['class'];
-	          return $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('style')];
-	       }
-	    
-	    }
-	    
-	    return array('msg' => 'style not found');
+		if (strlen($this->Input->get('type')) && strlen($this->Input->get('style')))
+		{
+
+			if ($this->Input->get('type') == 'changefont' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('style')]))
+			{
+				$GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('style')]['deleteClass'] = $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['class'];
+				return $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->get('style')];
+			}
+
+			if ($this->Input->get('type') == 'changestyle' && is_array($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('style')]))
+			{
+				$GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('style')]['deleteClass'] = $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['class'];
+				return $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->get('style')];
+			}
+
+		}
+
+		return array('msg' => 'style not found');
 
 	}
 
