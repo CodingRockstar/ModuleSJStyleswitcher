@@ -76,8 +76,17 @@ var SJStyleswitcher = new Class(
                    
                    
                 // add css-file to head
+                var linkElem = (type == 'changefont') ? $('sjFontLink') : $('sjStyleLink');
                 if (style.css != null && style.css.length > 0)
-                   var newCSS = Asset.css( style.css, { } );
+                {
+                   if (!linkElem)
+                      var newCSS = Asset.css( style.css, { id: (type == 'changefont') ? 'sjFontLink' : 'sjStyleLink' } );
+                   else
+                      $(linkElem).set('href', style.css);
+                }
+                else if (linkElem) 
+                   $(linkElem).dispose();
+                   	
                 
              },
              onError: function(text, error){

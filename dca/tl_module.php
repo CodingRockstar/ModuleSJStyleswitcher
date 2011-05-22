@@ -30,7 +30,7 @@
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['sjstyleswitcher'] = '{title_legend},name,headline,type;{config_legend},sjstyleswitcher_fontsizes,sjstyleswitcher_styles,sjstyleswitcher_cookielifetime;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['sjstyleswitcher'] = '{title_legend},name,headline,type;{config_legend},sjstyleswitcher_fontsizes,sjstyleswitcher_styles,sjstyleswitcher_alternatestyles,sjstyleswitcher_cookielifetime;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 
 /**
@@ -62,6 +62,13 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['sjstyleswitcher_cookielifetime'] = ar
 	'eval'             => array('maxlength'=>3, 'rgxp'=>'digit', 'tl_class'=>'')
 ); 
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['sjstyleswitcher_alternatestyles'] = array
+(
+	'label'            => &$GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_alternatestyles'],
+	'exclude'          => true,
+	'inputType'        => 'checkbox',
+	'eval'             => array('tl_class'=>'')
+);
 
 
 

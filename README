@@ -1,0 +1,25 @@
+MODULESJSTYLESWITCHER
+==============================
+Simple but powerful style-switcher module for the CMS "Contao".
+Easily to extend with your own styles.
+
+Special thanks to Oliver Richter (gruenfisch-webdesign.de) for
+the idea and the input regarding handicapped accessibility!
+
+
+
+INSTALLATION
+==============================
+The preferred installation method is the extension repository
+in Contao. Whereever it is possible, please use this method.
+
+Manual installation: Please copy the folder into the folder
+system/modules/.
+
+
+
+COPYRIGHT
+==============================
+Copyright by Stephan Jahrling, Oliver Richter 2011
+http://www.jahrling-software.de
+http://www.gruenfisch-webdesign.de

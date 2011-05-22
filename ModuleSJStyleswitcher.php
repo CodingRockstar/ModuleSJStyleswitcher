@@ -141,8 +141,8 @@ class ModuleSJStyleswitcher extends Module
 		{
 			$objPage->cssClass .= ' ' . $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['class'];
 
-			if ( strlen($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css']) )
-				$GLOBALS['TL_CSS'][] = $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css'];
+			if (strlen($GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css']))
+				$GLOBALS['TL_HEAD'][] = '<link rel="stylesheet" media="screen" type="text/css" href="' . $GLOBALS['TL_SJSTYLESWITCHER']['FONTSIZES'][$this->Input->cookie('SJSTYLESWITCHER_FONTSIZE')]['css'] . '" id="sjFontLink" />';
 		}
 
   
@@ -150,13 +150,20 @@ class ModuleSJStyleswitcher extends Module
 		{
 			$objPage->cssClass .= ' ' . $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['class'];
 
-			if ( strlen($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css']) )
-				$GLOBALS['TL_CSS'][] = $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css'];
+			if (strlen($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css']))
+				$GLOBALS['TL_HEAD'][] = '<link rel="stylesheet" media="screen" type="text/css" href="' . $GLOBALS['TL_SJSTYLESWITCHER']['STYLES'][$this->Input->cookie('SJSTYLESWITCHER_STYLE')]['css'] . '" id="sjStyleLink" />';
 		}	
         
         
         
-        // 5. insert mootools
+        // 5. use styles as alternate stylesheets
+        if ($this->sjstyleswitcher_alternatestyles == '1')
+        	foreach ($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'] as $name => $style)
+        		if (strlen($style['css']))
+        			$GLOBALS['TL_HEAD'][] = '<link rel="alternate stylesheet" type="text/css" href="' . $style['css'] . '" title="' . $style['label'] . '" id="' . $name . '" />';
+        
+        
+        // 6. insert mootools
         $GLOBALS['TL_MOOTOOLS'][] = "<script type='text/javascript'>
 <!--//--><![CDATA[//><!--
 window.addEvent('domready', function() {

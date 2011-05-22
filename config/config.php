@@ -70,7 +70,7 @@ $GLOBALS['TL_SJSTYLESWITCHER'] = array(
      'BLACKWHITE' => array(
         'label' => &$GLOBALS['TL_LANG']['MSC']['SJSTYLESWITCHER']['style_blackwhite'],
         'image' => '/system/modules/ModuleSJStyleswitcher/html/stilvariante_02.jpg',
-        'css'   => '/system/modules/ModuleSJStyleswitcher/html/blackwhite.css',
+        'css'   => '/system/modules/ModuleSJStyleswitcher/html/blackwhite2.css',
         'class' => 'blackwhite'
      )
   
