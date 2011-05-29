@@ -157,10 +157,12 @@ class ModuleSJStyleswitcher extends Module
         
        
 		// 5. use styles as alternate stylesheets
+		/*
 		if ($this->sjstyleswitcher_alternatestyles == '1')
 			foreach ($GLOBALS['TL_SJSTYLESWITCHER']['STYLES'] as $name => $style)
 				if (strlen($style['css']))
 					$GLOBALS['TL_HEAD'][] = '<link rel="alternate stylesheet" type="text/css" href="' . $style['css'] . '" title="' . $style['label'] . '" id="' . $name . '" />';
+		*/
 
 
 		// 6. insert mootools

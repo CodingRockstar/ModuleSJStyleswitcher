@@ -30,7 +30,7 @@
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['sjstyleswitcher'] = '{title_legend},name,headline,type;{config_legend},sjstyleswitcher_fontsizes,sjstyleswitcher_styles,sjstyleswitcher_alternatestyles,sjstyleswitcher_cookielifetime;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['sjstyleswitcher'] = '{title_legend},name,headline,type;{config_legend},sjstyleswitcher_fontsizes,sjstyleswitcher_styles,sjstyleswitcher_cookielifetime;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 
 /**

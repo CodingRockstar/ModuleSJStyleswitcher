@@ -32,8 +32,8 @@
  */
 $GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_fontsizes']      = array('Auswählbare Schriftgrößen', 'Schriftgrößen, welche der Benutzer auswählen können soll.');
 $GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_styles'] 	       = array('Auswählbare Styles / Kontraste', 'Styles, welche der Benutzer auswählen können soll.');
-$GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_cookielifetime'] = array('Cookie-Ablaufzeit (in Tagen)', 'Zeit in Tagen, welche das Cookie erhalten bleiben soll. Für ein Session-Cookie bitte eine 0 eintragen.');
-$GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_alternatestyles']= array('Alternative Styles verwenden', 'Lädt alle Styles als rel="alternate style" in den HEAD-Bereich.');
+$GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_cookielifetime'] = array('Cookie-Ablaufzeit (in Tagen)', 'Zeit in Tagen, welche das Cookie zur Speicherung der Benutzereinstellungen im Browser des Webseitenlesers erhalten bleibt. Zur Verwendung eines Session-Cookies bitte eine 0 eintragen.');
+$GLOBALS['TL_LANG']['tl_module']['sjstyleswitcher_alternatestyles']= array('Auszeichnung "alternate stylesheet" verwenden', 'ädt alle Styles (Stil-Menüpunkte) als link-Tags mit der Auszeichnung rel="alternate style" in den HEAD-Bereich der Webseite.');
 
 
 ?>
